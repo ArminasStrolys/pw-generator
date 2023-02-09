@@ -2,7 +2,7 @@
 
 <div>
   <label>Enter length
-    <input type="text">
+    <input (input)="OnChangeLength($event)" type="text">
   </label>
 </div>
 
@@ -26,7 +26,8 @@
 
 <div>
   <!-- EVENT BINDING SYNTAX -->
-  <button (click)="onButtonClick()">Generate</button>
+  <button [disabled]="!(passwordLength && (OnChangeUseLetters || OnChangeUseNumbers || OnChangeUseSymbols))"
+    (click)="onButtonClick()">Generate</button>
 </div>
 
 <div>

@@ -30,8 +30,9 @@
     (click)="onButtonClick()">Generate</button>
 </div>
 
-<div>
+<div *ngIf="password">
   <label>Your Password
+    <!-- PROPERTY BINDING SYNTAX -->
     <input [value]="password" />
   </label>
 </div>
